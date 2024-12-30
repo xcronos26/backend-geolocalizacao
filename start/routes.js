@@ -17,7 +17,8 @@ const Route = use("Route");
 
 Route.post("/register", "AuthController.register");
 Route.post("/authenticate", "AuthController.authenticate");
-Route.post('/location', 'LocationController.store').middleware(["auth"]);
+//Route.post('/location', 'LocationController.store').middleware(["auth"]);
+Route.post('/location', 'UserLocationController.store').middleware(['auth']);
 
 
 Route.get("/app", "AppController.index").middleware(["auth"]);
