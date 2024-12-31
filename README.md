@@ -26,3 +26,10 @@ Run the following command to run startup migrations.
 ```js
 adonis migration:run
 ```
+### start
+
+Run the following command to run the server
+
+```js
+npm start
+```
