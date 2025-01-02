@@ -26,4 +26,4 @@ Route.post('/location', 'UserLocationController.store').middleware(['auth']);
 
 
 
-Route.get("/app", "AppController.index").middleware(["auth"]);
+Route.get("/app", "AppController.index");
