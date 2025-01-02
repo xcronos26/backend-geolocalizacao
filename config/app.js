@@ -176,10 +176,8 @@ module.exports = {
       level: 'info'
     },
     http: {
-      // Define a porta dinâmica ou usa a padrão 3333
-      port: Env.get('PORT', 3333),
-      // Escuta em todos os IPs disponíveis
-      host: '0.0.0.0',
+      port: Env.get('PORT', 10000), // Porta padrão ou fornecida pelo Render
+      host: '0.0.0.0', // Escuta em todos os IPs
     },    
     /*
     |--------------------------------------------------------------------------
