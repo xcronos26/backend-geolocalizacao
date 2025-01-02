@@ -176,7 +176,7 @@ module.exports = {
       level: 'info'
     },
     http: {
-      port: Env.get('PORT', 10000), // Porta padrão ou fornecida pelo Render
+      port: Env.get('PORT', 3306), // Porta padrão ou fornecida pelo Render
       host: '0.0.0.0', // Escuta em todos os IPs
     },    
     /*
