@@ -23,6 +23,7 @@ Route.post('/admin/register', 'AdminController.register');
 
 //Route.post('/location', 'LocationController.store').middleware(["auth"]);
 Route.post('/location', 'UserLocationController.store').middleware(['auth']);
+Route.get('/locations', 'UserLocationController.index').middleware(['auth']);
 
 
 
