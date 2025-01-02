@@ -175,7 +175,12 @@ module.exports = {
       name: 'adonis-app',
       level: 'info'
     },
-
+    http: {
+      // Define a porta dinâmica ou usa a padrão 3333
+      port: Env.get('PORT', 3333),
+      // Escuta em todos os IPs disponíveis
+      host: '0.0.0.0',
+    },    
     /*
     |--------------------------------------------------------------------------
     | File Transport
