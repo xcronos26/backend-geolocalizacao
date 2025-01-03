@@ -13,10 +13,10 @@ class UserLocationController {
     return location;
   }
 
-  async index({ auth, response }) {
+  async index({ response }) {
     try {
-      const user = auth.user;
-      const locations = await UserLocation.query().where('user_id', user.id).fetch();
+      // Buscando todas as localizações de todos os usuários
+      const locations = await UserLocation.all();
       return response.json(locations);
     } catch (error) {
       return response.status(500).json({ error: 'Erro ao obter localizações' });
