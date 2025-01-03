@@ -21,10 +21,7 @@ Route.post("/authenticate", "AuthController.authenticate");
 Route.post('/admin/authenticate', 'AdminController.authenticate');
 Route.post('/admin/register', 'AdminController.register');
 
-//Route.post('/location', 'LocationController.store').middleware(["auth"]);
 Route.post('/location', 'UserLocationController.store').middleware(['auth']);
-Route.get('/locations', 'UserLocationController.index').middleware(['auth']);
-
-
+Route.get('/all', 'UserLocationController.index').middleware(['auth']);
 
 Route.get("/app", "AppController.index");
